@@ -66,6 +66,8 @@ const MoviesWrapper: FC<Props> = (props) => {
 
   const reduxMovies = useAppSelector((state) => state.movies);
 
+  console.log("reduxMovie", reduxMovies);
+
   const ref = useRef<HTMLDivElement>(null);
 
   const scrollToTop = () => {
@@ -179,7 +181,7 @@ const MoviesWrapper: FC<Props> = (props) => {
           isResetting={isResetting}
           setIsResetting={setIsResetting}
         />
-        <div className="w-full lg:w-[75%]" ref={ref}>
+        <div className="w-full lg:w-3/4" ref={ref}>
           {moviesList.length > 0 ? (
             <>
               <Cards
